@@ -10,6 +10,16 @@ namespace ConsoleApplication1
     {
         static void Main(string[] args)
         {
+            Duck mallard = new MallardDuck();
+            mallard.PerformQuack();
+            mallard.PerformFly();
+
+            Duck modelDuck = new ModelDuck();
+            modelDuck.PerformFly();
+            modelDuck.SetFlyBehavior(new FlyRocketPowered());
+            modelDuck.PerformFly();
+
+            Console.ReadKey();
         }
     }
 }
